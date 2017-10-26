@@ -8,8 +8,10 @@ import { Component, Input } from "@angular/core";
 
 export class TemperaturePanelComponent{
 
+    @Input() min: number;
+    @Input() max: number;
+    @Input() humidity: number;
+    @Input() img: string;
     @Input() day: string;
-    @Input() min: string;
-    @Input() max: string;
 
 }

@@ -1,13 +1,15 @@
 <div class="container">
 
-    <h3 class="text-center">Wilmington - DE</h3>
+    <h3 class="text-center">{{city}} - {{state}}</h3>
 
     <br/>
     <br/>
 
     <div class="row">
-        <div class="col-md-2" *ngFor="let number of numbers">
-            <temperature-panel day="Today" min="65°F" max="80°F"></temperature-panel>
+        <div class="col-md-2" *ngFor="let panel of panels">
+            <temperature-panel day="{{getDayName(panel.applicable_date)}}" min="{{convertCelsiustoFahrenheit(panel.min_temp)}}°F" 
+            max="{{convertCelsiustoFahrenheit(panel.max_temp)}}°F" img="{{panel.weather_state_abbr}}"
+            humidity="{{panel.humidity}}"></temperature-panel>
         </div>
         <!--col-md-2-->
     </div>

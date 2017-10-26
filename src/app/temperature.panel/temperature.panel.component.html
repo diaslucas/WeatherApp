@@ -3,11 +3,12 @@
         <h3 class="panel-title text-center">{{day}}</h3>
     </div>
     <div class="panel-body">
-        <img src="https://www.metaweather.com/static/img/weather/png/64/s.png" class="img-responsive center-block">
+        <img src="https://www.metaweather.com/static/img/weather/png/64/{{img}}.png" class="img-responsive center-block">
         <div class="box-temperature text-center">
             <span class="temperature">{{min}}</span>
             <strong>-</strong>
-            <span class="temperature">{{max}}</span>
+            <span class="temperature">{{max}}</span><br/><br/>
+            <span class="text-center">Humidity: {{humidity}}%</span>
         </div>
     </div>
     <!--panel-body-->

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule} from "@angular/http";
+import "rxjs/add/operator/map";
 
 import { AppComponent } from './app.component';
 import { BoxModule } from "./box/box.module";
@@ -9,7 +11,7 @@ import { BoxModule } from "./box/box.module";
     AppComponent
   ],
   imports: [
-    BrowserModule, BoxModule
+    BrowserModule, BoxModule, HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
